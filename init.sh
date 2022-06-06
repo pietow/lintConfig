@@ -1,8 +1,11 @@
 #!/bin/bash
 
 mainProject=$(git rev-parse --show-superproject-working-tree)
-echo mainProject
+echo $mainProject
 
-if [ mainProject ]; then
-    echo "true"
+if [ -z "$mainProject" ]; 
+then
+    echo "empty"
+else
+    echo "not empty"
 fi
